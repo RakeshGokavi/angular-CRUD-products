@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="text-center">
+                    <h1>Sign Up</h1>
+                    <h6>Register Yourself!!</h6>
+                </div>
+                <form>
+                    <form [formGroup]="signupForm" (ngSubmit)="signUp()">
+                        <div class="mb-3">
+                            <label for="fullname" class="form-label">Full Name</label>
+                            <input formControlName="fullname" type="text" class="form-control" id="fullname" ngModel required minlength="3">
+                            <!-- <div *ngFor="signupForm.get('fullname').invalid && (signupForm.get('fullname').dirty || signupForm.get('fullname').touched)">
+                              <div *ngFor="signupForm.get('username').hasError('required')">Username is required.</div>
+                              <div *ngFor="signupForm.get('username').hasError('minlength')">Username must be at least 3 characters long.</div>
+                              <div *ngFor="signupForm.get('username').hasError('maxlength')">Username must be at most 20 characters long.</div>
+                            </div> -->
+
+                          </div>
+                          <div class="mb-3">
+                            <label for="password" class="form-label">Mobile Number</label>
+                            <input formControlName="mobile" type="number" class="form-control" id="password" required minlength="9" maxlength="10">
+                          </div>
+                        <div class="mb-3">
+                          <label for="email" class="form-label">Email address</label>
+                          <input formControlName="email" type="email" class="form-control" id="email" aria-describedby="emailHelp">
+                        </div>
+                        <div class="mb-3">
+                          <label for="exampleInputPassword3" class="form-label">Password</label>
+                          <input formControlName="password" type="password" class="form-control" id="exampleInputPassword3">
+                        </div>
+                        <button type="submit" class="btn btn-primary mb-2" >Sign up</button>
+                      </form>
+                      <a style="color: #fff; margin-top: 10px" routerLink="/login">Already registered? Click to Login!!</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

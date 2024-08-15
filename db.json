@@ -1,0 +1,69 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "productName": "MI 1",
+      "productDescription": "camera phone",
+      "createdDate": "2024-03-13 15:14:10",
+      "productCategory": "Mobile"
+    },
+    {
+      "id": 2,
+      "productName": "MI 2",
+      "productDescription": "Budget phone",
+      "createdDate": "2024-03-13 15:14:59",
+      "productCategory": "Mobile"
+    },
+    {
+      "id": 3,
+      "productName": "samsung a5",
+      "productDescription": "Flagship",
+      "createdDate": "2024-03-13 15:15:36",
+      "productCategory": "Mobile"
+    },
+    {
+      "id": 4,
+      "productName": "Iphone Se",
+      "productDescription": "best phone",
+      "createdDate": "2024-03-13 15:16:27",
+      "productCategory": "Mobile"
+    }
+  ],
+  "signupUsers": [
+    {
+      "fullname": "Akash patil",
+      "email": "hdfh58@gmail.com",
+      "password": "HSghdf545",
+      "mobile": 9752122456,
+      "id": 2
+    },
+    {
+      "fullname": "Vijay prakash",
+      "email": "hfghsg66@gmail.com",
+      "password": "Demo@123",
+      "mobile": 9723512244,
+      "id": 3
+    },
+    {
+      "fullname": "Ram",
+      "email": "ram@gmail.com",
+      "password": "1234",
+      "mobile": 9093494492,
+      "id": 4
+    },
+    {
+      "fullname": "James Bond",
+      "email": "james@gmail.com",
+      "password": "james7",
+      "mobile": 70070070,
+      "id": 5
+    },
+    {
+      "fullname": "",
+      "email": "",
+      "password": "",
+      "mobile": "",
+      "id": 6
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+<nav class="navbar navbar-light bg-primary">
+  <div class="container-fluid">
+    <h1 style="color: aliceblue;">Product Dashboard</h1>
+    <div class="d-flex">
+      <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">Add Product</button>
+      <button routerLink="/login" class="btn btn-danger mx-2">Logout</button>
+    </div>
+  </div>
+</nav>
+
+<input type="text" id="myInput" (keyup)="myFunction($event)" placeholder="Search for names.." title="Type in a name">
+
+
+<table id="myTable" class="table mt-3">
+  <thead>
+    <tr>
+      <th scope="col">Product Name</th>
+      <th scope="col">Product Category</th>
+      <th scope="col">Product Description</th>
+      <th scope="col">Created Date</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let row of productData">
+      <td>{{row.productName}}</td>
+      <td>{{row.productCategory}}</td>
+      <td>{{row.productDescription}}</td>
+      <td>{{row.createdDate}}</td>
+      <td>
+        <button class="btn btn-info">Edit</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Product Details </h5>
+        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
+        </button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="formValue">
+          <div class="form-group">
+            <label for="exampleInputProduct1">Product Name</label>
+            <input type="text" formControlName="productName" class="form-control" id="exampleInputName"
+              aria-describedby="emailHelp">
+          </div>
+
+          <div class="form-group">
+            <label for="exampleInputProductCategory">Product Category</label>
+            <input type="text" formControlName="productCategory" class="form-control" id="exampleInputCategory">
+          </div>
+
+          <div class="form-group">
+            <label for="exampleInputProductDes">Product Description</label>
+            <input type="text" formControlName="productDescription" class="form-control" id="exampleInputDescription">
+          </div>
+
+          <div class="form-group">
+            <label for="exampleInputCreatedDate">Created Date</label>
+            <input type="datetime" formControlName="createdDate" class="form-control" id="exampleInputCreatedDate"
+              [value]="getCurrentDateTime()">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" id="cancel" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" (click)="postProductDetails()" class="btn btn-primary">Add</button>
+      </div>
+    </div>
+  </div>
+</div>
